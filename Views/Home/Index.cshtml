@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model IQueryable<BookModel>
+
+
+<header style="        text-align: center;
+        color: #000033;
+        font-family: Arial, Helvetica, sans-serif;
+">
+    <h1>Welcome to Congo</h1>
+    <h3>Online Bookstore of Professor Hiltons Favorite Books</h3>
+</header>
+<br /><br />
+
+@foreach (var x in Model)
+{ <!-- iterate through the database and print out the books-->
+    <div style="text-align:center; color: #000033; font-family: Arial, Helvetica, sans-serif;">
+        <h5>Book Title: @x.Title</h5>
+        <p>ISBN: @x.ISBN</p>
+        <p>Author: @x.Author</p>
+        <p>Publisher: @x.Publisher</p>
+        <p>Category: @x.Category</p>
+        <p>Price: @x.Price</p>
+
+    </div>
+}
