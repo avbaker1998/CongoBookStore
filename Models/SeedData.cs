@@ -32,7 +32,8 @@ namespace Assign5_Books.Models
                         Author = "Victor Hugo",
                         Publisher = "Signet",
                         Category = "Fiction, Classic",
-                        Price = 9.95
+                        Price = 9.95,
+                        PageNumber = 1488
                     },
 
                     new BookModel
@@ -42,7 +43,8 @@ namespace Assign5_Books.Models
                         Author = "Doris Kearns Goodwin",
                         Publisher = "Simon & Schuster",
                         Category = "Non-Fiction, Biography",
-                        Price = 14.58
+                        Price = 14.58,
+                        PageNumber = 944
                     },
 
                     new BookModel
@@ -52,7 +54,8 @@ namespace Assign5_Books.Models
                         Author = "Alice Schroeder",
                         Publisher = "Bantam",
                         Category = "Non-Fiction, Biography",
-                        Price = 21.54
+                        Price = 21.54,
+                        PageNumber =832
                     },
 
                     new BookModel
@@ -62,7 +65,8 @@ namespace Assign5_Books.Models
                         Author = "Ronald C. White",
                         Publisher = "Random House",
                         Category = "Non-Fiction, Biography",
-                        Price = 11.61
+                        Price = 11.61,
+                        PageNumber = 864
                     },
 
                     new BookModel
@@ -72,7 +76,8 @@ namespace Assign5_Books.Models
                         Author = "Laura Hillenbrand",
                         Publisher = "Random House",
                         Category = "Non-Fiction, Historical",
-                        Price = 13.33
+                        Price = 13.33,
+                        PageNumber = 528
                     },
 
                     new BookModel
@@ -82,7 +87,8 @@ namespace Assign5_Books.Models
                         Author = "Michael Crichton",
                         Publisher = "Vintage",
                         Category = "Fiction, Historical Fiction",
-                        Price = 15.95
+                        Price = 15.95,
+                        PageNumber = 288
                     },
 
                      new BookModel
@@ -92,7 +98,8 @@ namespace Assign5_Books.Models
                          Author = "Cal Newport",
                          Publisher = "Grand Central Publishing",
                          Category = "Non-Fiction, Self-Help",
-                         Price = 14.99
+                         Price = 14.99,
+                         PageNumber = 304
                      },
 
                      new BookModel
@@ -102,7 +109,8 @@ namespace Assign5_Books.Models
                          Author = "Michael Abrashoff",
                          Publisher = "Grand Central Publishing",
                          Category = "Non-Fiction, Self-Help",
-                         Price = 21.66
+                         Price = 21.66,
+                         PageNumber = 240
                      },
 
                      new BookModel
@@ -112,7 +120,8 @@ namespace Assign5_Books.Models
                          Author = "Richard Branson",
                          Publisher = "Portfolio",
                          Category = "Non-Fiction, Business",
-                         Price = 29.16
+                         Price = 29.16,
+                         PageNumber = 400
                      },
 
                      new BookModel
@@ -122,7 +131,40 @@ namespace Assign5_Books.Models
                          Author = "John Grisham",
                          Publisher = "Bantam",
                          Category = "Fiction, Thrillers",
-                         Price = 15.03
+                         Price = 15.03,
+                         PageNumber = 642
+                     },
+                     new BookModel
+                     {
+                         ISBN = 978 - 0553234613,
+                         Title = "Pride and Prejudice",
+                         Author = "Jane Austen",
+                         Publisher = "Barnes & Noble",
+                         Category = "Romance, Satire",
+                         Price = 10.99,
+                         PageNumber = 358
+                     },
+
+                     new BookModel
+                     {
+                         ISBN = 978 - 0555673613,
+                         Title = "The Peacegiver",
+                         Author = "James L. Ferrell",
+                         Publisher = "Deseret Book",
+                         Category = "Religion",
+                         Price = 17.99,
+                         PageNumber = 204
+                     },
+
+                     new BookModel
+                     {
+                         ISBN = 978 - 0578493613,
+                         Title = "Ahsoka",
+                         Author = "E. K. Johnston",
+                         Publisher = "Disney Press",
+                         Category = "Science Fiction",
+                         Price = 14.99,
+                         PageNumber = 403
                      }
 
 

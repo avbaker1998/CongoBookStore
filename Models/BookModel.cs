@@ -29,6 +29,8 @@ namespace Assign5_Books.Models
         //Price of the book
         [Required]
         public double Price { get; set; }
+        [Required]
+        public int PageNumber { get; set; }
 
     }
 }

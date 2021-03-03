@@ -2,7 +2,7 @@
 
 namespace Assign5_Books.Migrations
 {
-    public partial class Int : Migration
+    public partial class Inital : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,11 +13,12 @@ namespace Assign5_Books.Migrations
                     BookID = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     ISBN = table.Column<int>(nullable: false),
-                    Title = table.Column<string>(nullable: true),
-                    Author = table.Column<string>(nullable: true),
-                    Publisher = table.Column<string>(nullable: true),
-                    Category = table.Column<string>(nullable: true),
-                    Price = table.Column<double>(nullable: false)
+                    Title = table.Column<string>(nullable: false),
+                    Author = table.Column<string>(nullable: false),
+                    Publisher = table.Column<string>(nullable: false),
+                    Category = table.Column<string>(nullable: false),
+                    Price = table.Column<double>(nullable: false),
+                    PageNumber = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {

@@ -2,27 +2,58 @@
     ViewData["Title"] = "Home Page";
 }
 
-@model IQueryable<BookModel>
+@model BookListViewModel
+<!--IQueryable<BookModel>-->
 
 
-<header style="        text-align: center;
+<!--COMMENTS FOR BOOTSTRAP
+    I used many new bootstrap and css commands but here are a few
+    1. align-items-start/align-items-end
+    2. my-auto
+    3. text-right/text-left
+    -->
+
+
+<div style="border: 7px double #BF8724;">
+    <header style="        text-align: center;
         color: #000033;
-        font-family: Arial, Helvetica, sans-serif;
-">
-    <h1>Welcome to Congo</h1>
-    <h3>Online Bookstore of Professor Hiltons Favorite Books</h3>
-</header>
-<br /><br />
+        font-family: 'Lato', sans-serif;
+        ">
+        <h1>Welcome to Congo</h1>
+        <h3>Online Bookstore of Professor Hiltons Favorite Books</h3>
+    </header>
+</div>
+<br />
+<br />
 
-@foreach (var x in Model)
-{ <!-- iterate through the database and print out the books-->
-    <div style="text-align:center; color: #000033; font-family: Arial, Helvetica, sans-serif;">
-        <h5>Book Title: @x.Title</h5>
-        <p>ISBN: @x.ISBN</p>
-        <p>Author: @x.Author</p>
-        <p>Publisher: @x.Publisher</p>
-        <p>Category: @x.Category</p>
-        <p>Price: @x.Price</p>
+<!--The purpose of tag helpers is to build html on the fly dynamically-->
 
+@foreach (var x in Model.Books)
+{<!-- iterate through the database and print out the books-->
+
+
+    <div class="row" style="background-color: aliceblue;
+        border-bottom: 2px inset #BF8724;
+" >
+        <div class="col-md-4 row-height text-right align-items-start my-auto">
+            <span><b>Book Title: @x.Title</b></span>
+        </div>
+        <div class="col-md-4 row-height text-center">
+            <p>ISBN: @x.ISBN</p>
+            <p>Author: @x.Author</p>
+            <p>Publisher: @x.Publisher</p>
+            <p>Category: @x.Category</p>
+            <p>Number of Pages: @x.PageNumber</p>
+        </div>
+        <div class="col-md-4 row-height text-left align-items-end my-auto">
+            Price: $@x.Price
+        </div>
     </div>
+
+
+    
 }
+<div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true" page-class="btn"
+     page-class-normal="btn-outline-dark"
+     page-class-selected="btn-white"
+     class="btn-group pull-right m-1"></div>
