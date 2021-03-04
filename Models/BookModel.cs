@@ -31,6 +31,6 @@ namespace Assign5_Books.Models
         public double Price { get; set; }
         [Required]
         public int PageNumber { get; set; }
-
+        public string Type { get;  set; }
     }
 }

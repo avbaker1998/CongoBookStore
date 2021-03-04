@@ -10,5 +10,9 @@ namespace Assign5_Books.Models.ViewModels
     {
         public IEnumerable<BookModel> Books { get; set; }
         public PagingInfo PagingInfo { get; set; }
+        public string CurrentCategory { get; set; }
+
+
+        public string Type { get; set; }
     }
 }

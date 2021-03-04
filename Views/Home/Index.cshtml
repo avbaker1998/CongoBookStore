@@ -32,28 +32,12 @@
 {<!-- iterate through the database and print out the books-->
 
 
-    <div class="row" style="background-color: aliceblue;
-        border-bottom: 2px inset #BF8724;
-" >
-        <div class="col-md-4 row-height text-right align-items-start my-auto">
-            <span><b>Book Title: @x.Title</b></span>
-        </div>
-        <div class="col-md-4 row-height text-center">
-            <p>ISBN: @x.ISBN</p>
-            <p>Author: @x.Author</p>
-            <p>Publisher: @x.Publisher</p>
-            <p>Category: @x.Category</p>
-            <p>Number of Pages: @x.PageNumber</p>
-        </div>
-        <div class="col-md-4 row-height text-left align-items-end my-auto">
-            Price: $@x.Price
-        </div>
-    </div>
+   <partial name="BookSummary" model="x"  />
 
 
     
 }
 <div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true" page-class="btn"
      page-class-normal="btn-outline-dark"
-     page-class-selected="btn-white"
+     page-class-selected="btn-white" page-url-category="@Model.Type"
      class="btn-group pull-right m-1"></div>

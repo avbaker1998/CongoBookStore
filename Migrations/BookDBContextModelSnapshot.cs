@@ -46,6 +46,9 @@ namespace Assign5_Books.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Type")
+                        .HasColumnType("TEXT");
+
                     b.HasKey("BookID");
 
                     b.ToTable("Books");

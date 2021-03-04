@@ -2,7 +2,7 @@
 
 namespace Assign5_Books.Migrations
 {
-    public partial class Inital : Migration
+    public partial class Init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -18,7 +18,8 @@ namespace Assign5_Books.Migrations
                     Publisher = table.Column<string>(nullable: false),
                     Category = table.Column<string>(nullable: false),
                     Price = table.Column<double>(nullable: false),
-                    PageNumber = table.Column<int>(nullable: false)
+                    PageNumber = table.Column<int>(nullable: false),
+                    Type = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

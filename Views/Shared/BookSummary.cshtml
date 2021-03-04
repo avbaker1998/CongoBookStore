@@ -1,0 +1,20 @@
+﻿@model BookModel    
+@{
+   <div class="row" style="background-color: aliceblue;
+        border-bottom: 2px inset #BF8724;
+">
+        <div class="col-md-4 row-height text-right align-items-start my-auto">
+            <span><b>Book Title: @Model.Title</b></span>
+        </div>
+        <div class="col-md-4 row-height text-center">
+            <p>ISBN: @Model.ISBN</p>
+            <p>Author: @Model.Author</p>
+            <p>Publisher: @Model.Publisher</p>
+            <p>Category: @Model.Category</p>
+            <p>Number of Pages: @Model.PageNumber</p>
+        </div>
+        <div class="col-md-4 row-height text-left align-items-end my-auto">
+            Price: $@Model.Price
+        </div>
+    </div>
+}
