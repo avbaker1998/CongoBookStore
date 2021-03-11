@@ -9,54 +9,77 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap" rel="stylesheet">
+    <link href="~/img/shoppingcart.png" />
 </head>
 <body style="background-color:peachpuff;">
     <div style="        background-color: #000033;
         font-family: 'Lato', sans-serif;
 ">
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" style="background-color: #000033; color: lightblue; width: 100%" >
-            <div class="container" style="background-color: #000033; color: lightblue;">
-                <img src="~/img/congoLogo.jpg" asp-area="" asp-controller="Home" asp-action="Index" width="60" height="60" alt="Congo Logo" />
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" style="background-color: #000033; color: lightblue;">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index" style="color: lightblue;">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy" style="color: lightblue;">Under Construction</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=youtu.be" style="color: lightblue;">Click for a Surprise</a>
-                        </li>
-                    </ul>
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" style="background-color: #000033; color: lightblue; width: 100%">
+                <div class="container" style="background-color: #000033; color: lightblue;">
+                    <img src="~/img/congoLogo.jpg" asp-area="" asp-controller="Home" asp-action="Index" width="60" height="60" alt="Congo Logo" />
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" style="background-color: #000033; color: lightblue;">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index" style="color: lightblue;">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy" style="color: lightblue;">Under Construction</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=youtu.be" style="color: lightblue;">Click for a Surprise</a>
+                            </li>
+                            <li>
+                                <div class="col-6 text-right text-light">
+                                    <vc:cart-summary />
+                                </div>
+                            </li>
+                        </ul>
+                        
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </header>
+        <!---->
     </div>
-    <div class="col col-md-auto" style="text-align: center;
-        font-family: 'Lato', sans-serif">
-        <br /><br />
-        <vc:navigation-menu/>
-        <br /><br />
-        @RenderBody()
-    </div>
-
-
-
-    <footer class="border-top footer text-muted" style="background-color:peachpuff;">
-        <div class="container">
-            &copy; 2021 - Congo  - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <div>
+        <div id="SideHeader" class="p-2">
+            <header style="border: 7px double #BF8724;
+        text-align: center;
+        color: #000033;
+        font-family: 'Lato', sans-serif;
+    ">
+                <h1>Welcome to Congo</h1>
+                <h3>Online Bookstore of Professor Hiltons Favorite Books</h3>
+            </header>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @RenderSection("Scripts", required: false)
+    </div>
+
+        <br />
+        <br />
+        <div class="col col-md-auto" style="text-align: center;
+        font-family: 'Lato', sans-serif">
+            <br /><br />
+            <vc:navigation-menu />
+            <br /><br />
+            @RenderBody()
+        </div>
+
+
+
+        <footer class="border-top footer text-muted" style="background-color:peachpuff;">
+            <div class="container">
+                &copy; 2021 - Congo  - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @RenderSection("Scripts", required: false)
 </body>
 </html>

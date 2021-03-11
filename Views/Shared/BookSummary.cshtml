@@ -16,5 +16,17 @@
         <div class="col-md-4 row-height text-left align-items-end my-auto">
             Price: $@Model.Price
         </div>
+
+
+       <form id="@Model.BookID" asp-page="/Pay" method="post">
+           <input type="hidden" asp-for="BookID"/>
+           <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+           <span class="card-text p-1">
+               @Model.Title
+               <button type="submit" class="btn-secondary btn-outline-light btn-sm pull-right" style="float:right">
+                   Add to Cart
+               </button> 
+           </span>
+       </form>
     </div>
 }

@@ -1,18 +1,28 @@
 ﻿@model IEnumerable<string>
 
 
+<div class="row ">
+    <div class="col align-self-center">
+        <a class="btn btn-block btn-outline-light" asp-action="Index" asp-controller="Home"
+           asp-route-category="">
+            Home
+        </a><br />
+    </div>
+</div>
 
-<a class="btn btn-block btn-outline-secondary" asp-action="Index" asp-controller="Home"
-   asp-route-category="">
-    Home
-</a> 
 
-@foreach (string category in Model)
-{
-    <a class="btn btn-block @(category == ViewBag.SelectedType ? "btn-primary" : "btn-outline-secondary")"
-       asp-action="Index" asp-controller="Home"
-       asp-route-category="@category"
-       asp-route-page="1">
-        @category
-    </a><br />
-}
+
+<div class="row">
+    @foreach (string category in Model)
+    {
+        <div class="col-3">
+            <a class="btn btn-block btn-outline-light @(category == ViewBag.SelectedType ? "btn-primary" : "btn-outline-secondary")"
+               asp-action="Index" asp-controller="Home"
+               asp-route-category="@category"
+               asp-route-page="1">
+                @category
+            </a><br />
+        </div>
+    }
+</div>
+
